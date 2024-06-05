@@ -1223,7 +1223,7 @@ def skybg_phot(data, starIndex, xc, yc, r=10, dr=5, ptol=99, debug=False):
         fig, ax = matplotlib.pyplot.subplots(2, 2, figsize=(9, 9))
         im = ax[0, 0].imshow(data[yv, xv], vmin=minb, vmax=maxb, cmap='inferno')
         ax[0, 0].set_title("Original Data")
-        #from mpl_toolkits.axes_grid1 import make_axes_locatable
+        from mpl_toolkits.axes_grid1 import make_axes_locatable
         divider = make_axes_locatable(ax[0, 0])
         cax = divider.append_axes('right', size='5%', pad=0.05)
         fig.colorbar(im, cax=cax, orientation='vertical')
